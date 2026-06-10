@@ -82,3 +82,6 @@ if vim.g.neovide then
     local default_path = vim.fn.expand("~/Documents/workspace") 
     vim.api.nvim_set_current_dir(default_path)
 end
+
+-- netrw 설정
+vim.g.netrw_bufsettings = 'noma nomod nu nobl nowrap ro'

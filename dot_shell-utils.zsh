@@ -4,6 +4,8 @@
 # .zshrc에서 다음과 같이 source 하여 사용
 # [ -f "$HOME/.shell-utils.zsh" ] && source "$HOME/.shell-utils.zsh"
 
+alias groot='cd "$(git rev-parse --show-toplevel)"'
+
 alias cddown='cd ~/Downloads'
 
 alias cppwd='pwd | {read var; echo $var | pbcopy; echo "클립보드 복사: $var"; }'

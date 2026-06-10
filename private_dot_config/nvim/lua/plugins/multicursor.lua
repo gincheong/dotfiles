@@ -15,7 +15,7 @@ return {
 
         -- Add or skip adding a new cursor by matching word/selection
         set({"n", "x"}, "<c-n>", function() mc.matchAddCursor(1) end)
-        set({"n", "x"}, "<c-s>", function() mc.matchSkipCursor(1) end)
+        set({"n", "x"}, "<c-m>", function() mc.matchSkipCursor(1) end)
         -- set({"n", "x"}, "<c-N>", function() mc.matchAddCursor(-1) end)
         -- set({"n", "x"}, "<c-S>", function() mc.matchSkipCursor(-1) end)
 

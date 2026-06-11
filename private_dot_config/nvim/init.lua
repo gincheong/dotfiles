@@ -85,3 +85,5 @@ end
 
 -- netrw 설정
 vim.g.netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
+vim.api.nvim_set_hl(0, "netrwMarkFile", { bg = "#ff5f5f", fg = "#000000", bold = true })
+

@@ -4,6 +4,9 @@
 # .zshrc에서 다음과 같이 source 하여 사용
 # [ -f "$HOME/.shell-utils.zsh" ] && source "$HOME/.shell-utils.zsh"
 
+# Network Read/Write
+alias netrw='nvim +Ex .'
+
 alias cdgt='cd "$(git rev-parse --show-toplevel)"'
 
 alias cddown='cd ~/Downloads'

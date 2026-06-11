@@ -5,7 +5,7 @@
 # [ -f "$HOME/.shell-utils.zsh" ] && source "$HOME/.shell-utils.zsh"
 
 # Network Read/Write
-alias netrw='nvim +Ex .'
+alias netrw='nvim +Ex'
 
 alias cdgt='cd "$(git rev-parse --show-toplevel)"'
 

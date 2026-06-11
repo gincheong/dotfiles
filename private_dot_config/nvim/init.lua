@@ -83,7 +83,9 @@ if vim.g.neovide then
     vim.api.nvim_set_current_dir(default_path)
 end
 
--- netrw 설정
+---- netrw 설정
+-- 라인넘버 표시 등..
 vim.g.netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
+-- `mf`로 마크 시 색상
 vim.api.nvim_set_hl(0, "netrwMarkFile", { bg = "#ff5f5f", fg = "#000000", bold = true })
 

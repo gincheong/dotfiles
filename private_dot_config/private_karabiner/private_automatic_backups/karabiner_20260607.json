@@ -5,22 +5,6 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "우측 command 조합 단축키(cmd+d 등) 무효화",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "any": "key_code",
-                                    "modifiers": {
-                                        "mandatory": ["right_command"],
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [{ "key_code": "vk_none" }],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "MouseKey",
                         "manipulators": [
                             {
@@ -57,43 +41,7 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Spacebar: Hold for Slow Mode (during mouse mode)",
-                                "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "slow_mode",
-                                            "value": 1
-                                        }
-                                    }
-                                ],
-                                "to_after_key_up": [
-                                    {
-                                        "set_variable": {
-                                            "name": "slow_mode",
-                                            "value": 0
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "space_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    },
-                                    {
-                                        "name": "slow_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Mouse Move Slow: i (up)",
+                                "description": "Mouse Move: i, k, j, l",
                                 "from": {
                                     "key_code": "i",
                                     "modifiers": { "optional": ["any"] }
@@ -102,7 +50,7 @@
                                     {
                                         "mouse_key": {
                                             "speed_multiplier": 1.0,
-                                            "y": -900
+                                            "y": -1300
                                         }
                                     }
                                 ],
@@ -114,14 +62,8 @@
                                         "name": "space_mode",
                                         "type": "variable_if",
                                         "value": 1
-                                    },
-                                    {
-                                        "name": "slow_mode",
-                                        "type": "variable_if",
-                                        "value": 1
                                     }
                                 ],
-                                "description": "Mouse Move Slow: k (down)",
                                 "from": {
                                     "key_code": "k",
                                     "modifiers": { "optional": ["any"] }
@@ -130,7 +72,7 @@
                                     {
                                         "mouse_key": {
                                             "speed_multiplier": 1.0,
-                                            "y": 900
+                                            "y": 1300
                                         }
                                     }
                                 ],
@@ -142,14 +84,8 @@
                                         "name": "space_mode",
                                         "type": "variable_if",
                                         "value": 1
-                                    },
-                                    {
-                                        "name": "slow_mode",
-                                        "type": "variable_if",
-                                        "value": 1
                                     }
                                 ],
-                                "description": "Mouse Move Slow: j (left)",
                                 "from": {
                                     "key_code": "j",
                                     "modifiers": { "optional": ["any"] }
@@ -158,7 +94,7 @@
                                     {
                                         "mouse_key": {
                                             "speed_multiplier": 1.0,
-                                            "x": -900
+                                            "x": -1300
                                         }
                                     }
                                 ],
@@ -170,14 +106,8 @@
                                         "name": "space_mode",
                                         "type": "variable_if",
                                         "value": 1
-                                    },
-                                    {
-                                        "name": "slow_mode",
-                                        "type": "variable_if",
-                                        "value": 1
                                     }
                                 ],
-                                "description": "Mouse Move Slow: l (right)",
                                 "from": {
                                     "key_code": "l",
                                     "modifiers": { "optional": ["any"] }
@@ -186,7 +116,7 @@
                                     {
                                         "mouse_key": {
                                             "speed_multiplier": 1.0,
-                                            "x": 900
+                                            "x": 1300
                                         }
                                     }
                                 ],
@@ -200,99 +130,6 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Mouse Move: i (up)",
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "mouse_key": {
-                                            "speed_multiplier": 1.0,
-                                            "y": -3000
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "space_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Mouse Move: k (down)",
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "mouse_key": {
-                                            "speed_multiplier": 1.0,
-                                            "y": 3000
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "space_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Mouse Move: j (left)",
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "mouse_key": {
-                                            "speed_multiplier": 1.0,
-                                            "x": -3000
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "space_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Mouse Move: l (right)",
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "mouse_key": {
-                                            "speed_multiplier": 1.0,
-                                            "x": 3000
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "space_mode",
-                                        "type": "variable_if",
-                                        "value": 1
-                                    }
-                                ],
-                                "description": "Left Click: r",
                                 "from": {
                                     "key_code": "r",
                                     "modifiers": { "optional": ["any"] }
@@ -308,7 +145,6 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Middle Click: 5",
                                 "from": {
                                     "key_code": "5",
                                     "modifiers": { "optional": ["any"] }
@@ -324,7 +160,6 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Right Click: t",
                                 "from": {
                                     "key_code": "t",
                                     "modifiers": { "optional": ["any"] }
@@ -340,7 +175,6 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Scroll Up: u",
                                 "from": {
                                     "key_code": "u",
                                     "modifiers": { "optional": ["any"] }
@@ -363,7 +197,6 @@
                                         "value": 1
                                     }
                                 ],
-                                "description": "Scroll Down: o",
                                 "from": {
                                     "key_code": "o",
                                     "modifiers": { "optional": ["any"] }
@@ -758,7 +591,6 @@
                     },
                     {
                         "description": "Quit application by pressing command-q twice",
-                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -1133,23 +965,16 @@
                             "to": [{ "key_code": "f13" }]
                         }
                     ]
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 641,
-                        "vendor_id": 1452
-                    },
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "caps_lock" },
-                            "to": [{ "key_code": "left_control" }]
-                        }
-                    ]
                 }
             ],
             "name": "Default profile",
             "selected": true,
+            "simple_modifications": [
+                {
+                    "from": { "key_code": "right_command" },
+                    "to": [{ "key_code": "f13" }]
+                }
+            ],
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
     ]

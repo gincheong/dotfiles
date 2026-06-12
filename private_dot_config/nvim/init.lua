@@ -84,8 +84,8 @@ if vim.g.neovide then
 end
 
 ---- netrw 설정
--- 라인넘버 표시 등..
+-- 라인넘버 표시 등
 vim.g.netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
--- `mf`로 마크 시 색상
+-- `mf` 마크 표시 디자인 변경
 vim.api.nvim_set_hl(0, "netrwMarkFile", { bg = "#ff5f5f", fg = "#000000", bold = true })
 

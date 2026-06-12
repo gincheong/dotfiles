@@ -5,6 +5,22 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "우측 command 조합 단축키(cmd+d 등) 무효화",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "any": "key_code",
+                                    "modifiers": {
+                                        "mandatory": ["right_command"],
+                                        "optional": ["any"]
+                                    }
+                                },
+                                "to": [{ "key_code": "vk_none" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "MouseKey",
                         "manipulators": [
                             {

@@ -79,7 +79,7 @@ vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- Neovide로 켤 때만 특정 디렉토리로 이동
 if vim.g.neovide then
-    local default_path = vim.fn.expand("~/Documents/workspace") 
+    local default_path = vim.fn.expand("~") 
     vim.api.nvim_set_current_dir(default_path)
 end
 

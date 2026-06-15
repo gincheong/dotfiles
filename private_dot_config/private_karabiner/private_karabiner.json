@@ -833,7 +833,7 @@
                     "simple_modifications": [
                         {
                             "from": { "consumer_key_code": "eject" },
-                            "to": [{ "software_function": { "iokit_power_management_sleep_system": {} } }]
+                            "to": [{ "generic_desktop": "do_not_disturb" }]
                         },
                         {
                             "from": { "key_code": "right_option" },

@@ -56,11 +56,49 @@ chezmoi edit-config
 ```toml
 
 [edit]
-    command = "nvim"
+  command = "nvim"
+  autoCommit = true
 
 [merge]
-    command = "nvim"
-    # 3-way diff
-    args = ["-d", "{{ .Destination }}", "{{ .Source }}", "{{ .Target }}"]
+  command = "nvim"
+  # 3-way diff
+  args = ["-d", "{{ .Destination }}", "{{ .Source }}", "{{ .Target }}"]
 ```
 
+## 변수 설정
+
+환경별로 다른 항목들은 변수로 관리할 수 있다.
+
+```sh
+chezmoi edit-config
+```
+
+```toml
+...
+
+[data]
+  workspace_path = '~/Documents/workspace'
+```
+
+위처럼 입력하고 다음처럼 참고할 수 있다. 
+그 전에 변수를 반영할 파일을 "템플릿"으로 추가해야 한다.
+
+```sh
+chezmoi add --template <file>
+```
+
+```md
+alias cdwork = 'cd {{ .workspace_path }}'
+```
+
+config에 입력한 값이 apply 시에 자동 반영된다.
+
+
+## Data 목록 
+
+이 레포에서 내가 쓰는 data 리스트를 여기에 관리함
+
+```toml
+[data]
+  workspace_path = ''
+```

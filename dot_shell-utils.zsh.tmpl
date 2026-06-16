@@ -9,6 +9,7 @@ alias netrw='nvim +Ex'
 
 alias cdgt='cd "$(git rev-parse --show-toplevel)"'
 
+alias cdwork='cd {{ .workspace_path }}'
 alias cddown='cd ~/Downloads'
 
 alias cppwd='pwd | {read var; echo $var | pbcopy; echo "클립보드 복사: $var"; }'

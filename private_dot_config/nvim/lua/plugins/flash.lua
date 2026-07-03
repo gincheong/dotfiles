@@ -7,6 +7,17 @@ return {
       search = {
         enabled = true
       },
+      char = {
+        char_actions = function(motion)
+          return {
+            [";"] = "next",
+            [","] = "prev",
+            -- flash 기본 설정인 clever-f style 제거
+            [motion.lower()] = "next",
+            [motion.upper()] = "prev",
+          }
+        end,
+      }
     }
   },
   keys = {

@@ -1,0 +1,59 @@
+if has("syntax")
+  syntax on
+endif
+
+let g:mapleader = ' '
+
+set clipboard=unnamed,unnamedplus
+set hlsearch
+set number
+set textwidth=0
+set wrapmargin=0
+set wrap
+set linebreak
+set smartindent
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+" use space instead of tab 
+set expandtab
+
+set ignorecase
+set smartcase
+
+" 한글 표시 관련
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8,cp949,euc-kr
+
+" disable auto wrap in git commit msg
+autocmd FileType gitcommit setlocal nowrap
+autocmd FileType gitcommit setlocal textwidth=0
+
+" disable color highlight commit summary
+autocmd FileType gitcommit highlight gitcommitSummary ctermfg=NONE guifg=NONE
+
+map <leader>h :noh<CR>
+map <leader>c m`gcc``
+map <leader>v gv
+map <leader>5 %
+map <leader>d "_dd
+
+nnoremap d "_d
+nnoremap s "_s
+nnoremap c "_c
+nnoremap x "_x
+nnoremap X "_X
+
+vnoremap p "_dP
+vnoremap d "_d
+vnoremap s "_s
+vnoremap c "_c
+
+" Yank 시 하이라이트 효과
+augroup highlight_yank
+    autocmd!
+    if exists('##TextYankPost')
+        autocmd TextYankPost * silent! lua vim.highlight.on_yank({higroup="IncSearch", timeout=200})
+    endif
+augroup END

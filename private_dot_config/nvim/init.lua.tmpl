@@ -66,13 +66,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
   end,
 })
 
--- <leader>{1~9} 탭 이동
-for i = 1, 9 do
-  vim.keymap.set("n", "<leader>" .. i, function()
-    vim.cmd("tabnext " .. i)
-  end, { desc = "Go to tab " .. i, silent = true })
-end
-
 -- 터미널 모드에서 Esc로 Normal 모드 복귀
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 ---- endof Custom Keymaps

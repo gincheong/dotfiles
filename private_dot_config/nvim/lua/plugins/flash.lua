@@ -7,16 +7,9 @@ return {
       search = {
         enabled = true
       },
+      -- f/F/t/T flash 연동 비활성화 (vim 기본 동작 사용)
       char = {
-        char_actions = function(motion)
-          return {
-            [";"] = "next",
-            [","] = "prev",
-            -- flash 기본 설정인 clever-f style 제거
-            -- [motion:lower()] = "next",
-            -- [motion:upper()] = "prev",
-          }
-        end,
+        enabled = false,
       }
     }
   },

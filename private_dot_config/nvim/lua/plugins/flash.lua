@@ -4,9 +4,6 @@ return {
   ---@type Flash.Config
   opts = {
     modes = {
-      search = {
-        enabled = true
-      },
       -- f/F/t/T flash 연동 비활성화 (vim 기본 동작 사용)
       char = {
         enabled = false,

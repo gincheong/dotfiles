@@ -1,5 +1,6 @@
 {
     "global": { "show_in_menu_bar": false },
+    "machine_specific": { "krbn-bf9b7c10-9c42-4167-b072-8442d2d6d769": { "external_editor_path": "/Applications/Neovide.app" } },
     "profiles": [
         {
             "complex_modifications": {
@@ -570,7 +571,7 @@
                                     {
                                         "software_function": {
                                             "set_mouse_cursor_position": {
-                                                "screen": 1,
+                                                "screen": 2,
                                                 "x": "50%",
                                                 "y": "50%"
                                             }
@@ -927,6 +928,10 @@
                         {
                             "from": { "key_code": "left_option" },
                             "to": [{ "key_code": "left_command" }]
+                        },
+                        {
+                            "from": { "key_code": "right_option" },
+                            "to": [{ "key_code": "right_command" }]
                         }
                     ],
                     "treat_as_built_in_keyboard": true

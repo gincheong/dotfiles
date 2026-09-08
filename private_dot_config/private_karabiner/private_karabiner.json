@@ -897,7 +897,7 @@
                         },
                         {
                             "from": { "key_code": "right_option" },
-                            "to": [{ "key_code": "f13" }]
+                            "to": [{ "key_code": "right_command" }]
                         }
                     ]
                 },

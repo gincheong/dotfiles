@@ -8,4 +8,7 @@ return {
   --         -- Put your configuration here
   --     })
   -- end
+  keys = {
+    { "S", "ysiw", remap = true, desc = "Surround word" }
+  }
 }

@@ -605,6 +605,18 @@
                             "to": [{ "generic_desktop": "do_not_disturb" }]
                         },
                         {
+                            "from": { "key_code": "f22" },
+                            "to": [{ "consumer_key_code": "rewind" }]
+                        },
+                        {
+                            "from": { "key_code": "f23" },
+                            "to": [{ "consumer_key_code": "fast_forward" }]
+                        },
+                        {
+                            "from": { "key_code": "f24" },
+                            "to": [{ "consumer_key_code": "play_or_pause" }]
+                        },
+                        {
                             "from": { "key_code": "right_option" },
                             "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
                         }
@@ -699,7 +711,7 @@
                         },
                         {
                             "from": { "key_code": "right_option" },
-                            "to": [{ "key_code": "right_command" }]
+                            "to": [{ "key_code": "f13" }]
                         }
                     ],
                     "treat_as_built_in_keyboard": true
@@ -919,6 +931,25 @@
                             "to": [{ "key_code": "f13" }]
                         }
                     ]
+                },
+                {
+                    "identifiers": {
+                        "is_pointing_device": true,
+                        "product_id": 8257,
+                        "vendor_id": 1149
+                    },
+                    "ignore": true,
+                    "ignore_vendor_events": true
+                },
+                {
+                    "identifiers": {
+                        "is_pointing_device": true,
+                        "product_id": 5632,
+                        "vendor_id": 11092
+                    },
+                    "ignore": false,
+                    "mouse_flip_horizontal_wheel": true,
+                    "mouse_flip_vertical_wheel": true
                 }
             ],
             "name": "Default profile",

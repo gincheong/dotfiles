@@ -6,7 +6,7 @@
     "spacing": 2,
     "belowMenuBar": false,
     "appearance": "dark",
-    "keepNotificationsClear": false,
+    "keepNotificationsClear": true,
     "keepWindowsClear": true,
     "hideMenuBar": true,
     "menuBarRevealDelay": 0,

@@ -20,15 +20,11 @@ if [[ -f $cache && -f $cache.apps && $(<"$cache.apps") == "$APPS" ]]; then
 fi
 
 while IFS= read -r app; do
-  info=$(lsappinfo info -only bundleID -only bundlepath "$app" 2>/dev/null || true)
-  bundle=$(printf '%s\n' "$info" | sed -n 's/^ *bundleID="\([^"]*\)".*/\1/p')
+  info=$(lsappinfo info -long "$app")
+  bundle=$(printf '%s\n' "$info" | sed -n 's/^"CFBundleIdentifier"="\([^"]*\)"$/\1/p')
   [[ -n $bundle ]] || continue
-  path=$(printf '%s\n' "$info" | sed -n 's/^ *bundle path="\([^"]*\)".*/\1/p')
-  # macOS 27의 lsappinfo는 StatusLabel을 반환하지 않아 Dock 접근성 값으로 읽는다.
-  badge=$(osascript -e 'on run argv
-tell application "System Events" to tell process "Dock" to get value of attribute "AXStatusLabel" of UI element (item 1 of argv) of list 1
-end run' "$app" 2>/dev/null || true)
-  [[ $badge == "missing value" ]] && badge=""
+  path=$(printf '%s\n' "$info" | sed -n 's/^"LSBundlePath"="\([^"]*\)"$/\1/p')
+  badge=$(printf '%s\n' "$info" | sed -n 's/.*"label"="\([^"]*\)".*/\1/p')
   jq -cn --arg app "$app" --arg bundle "$bundle" --arg path "$path" --arg badge "$badge" '{app: $app, bundle: $bundle, path: $path, badge: $badge}'
 done < <(printf '%s' "$APPS" | jq -Rrs 'split(",")[] | gsub("^ +| +$"; "") | select(length > 0)') |
   jq -s '

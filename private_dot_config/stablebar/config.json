@@ -1,18 +1,18 @@
 {
-  "$schema": "https://raw.githubusercontent.com/Seb-GRAF/StableBar/v0.13.0/stablebar.schema.json",
+  "$schema": "https://raw.githubusercontent.com/Seb-GRAF/StableBar/v0.14.0/stablebar.schema.json",
   "bar": {
     "offset": 0,
     "inset": 10,
     "spacing": 2,
     "belowMenuBar": false,
-    "appearance": "dark",
+    "appearance": null,
     "keepNotificationsClear": true,
     "keepWindowsClear": true,
     "hideMenuBar": true,
     "menuBarRevealDelay": 0,
     "inlineHoverControls": false,
     "style": {
-      "cornerRadius": 0,
+      "cornerRadius": 12,
       "borderEdges": "bottom"
     },
     "margin": 0
@@ -57,7 +57,20 @@
       "id": "widget-3a9051f4",
       "position": "left",
       "type": "clock",
-      "display": "all"
+      "display": "all",
+      "style": {
+        "paddingHorizontal": 9
+      }
+    },
+    {
+      "id": "widget-528e3ca7",
+      "position": "right",
+      "type": "privacy",
+      "display": "all",
+      "hideWhenIdle": true,
+      "style": {
+        "paddingHorizontal": 8
+      }
     }
   ],
   "workspaceSource": "spaces",
@@ -110,7 +123,13 @@
       },
       "style": {
         "fontSize": 13,
-        "fontWeight": "semibold"
+        "fontWeight": "semibold",
+        "paddingHorizontal": 8
+      }
+    },
+    "calendar-patched": {
+      "style": {
+        "paddingHorizontal": 8
       }
     }
   },
@@ -126,6 +145,7 @@
         "notchLeft": [],
         "notchRight": [],
         "right": [
+          "widget-528e3ca7",
           "calendar-patched",
           "dock-badges-patched",
           "widget-3a9051f4"
@@ -166,5 +186,12 @@
         ]
       }
     }
-  }
+  },
+  "profiles": [
+    {
+      "configuration": {},
+      "enabled": false,
+      "name": "1"
+    }
+  ]
 }

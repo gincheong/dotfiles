@@ -1,0 +1,15 @@
+{
+  "widgets": [
+    {
+      "id": "calendar-patched",
+      "type": "calendar",
+      "position": "right",
+      "details": true,
+      "style": {
+        "fontSize": 13,
+        "minWidth": "@setting.minWidth",
+        "maxWidth": "@setting.maxWidth"
+      }
+    }
+  ]
+}

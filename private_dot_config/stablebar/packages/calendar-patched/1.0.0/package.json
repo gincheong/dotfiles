@@ -1,0 +1,13 @@
+{
+  "id": "calendar-patched",
+  "name": "Calendar (Patched)",
+  "version": "1.0.0",
+  "description": "Built-in calendar widget with minimum and maximum width exposed as package settings.",
+  "author": "evan",
+  "entry": "config.json",
+  "minimumVersion": "0.13.0",
+  "settings": {
+    "minWidth": { "type": "number", "title": "Minimum width", "description": "Points. 0 lets the widget shrink to its content.", "default": 160 },
+    "maxWidth": { "type": "number", "title": "Maximum width", "description": "Points. Must not be smaller than the minimum width.", "default": 400 }
+  }
+}

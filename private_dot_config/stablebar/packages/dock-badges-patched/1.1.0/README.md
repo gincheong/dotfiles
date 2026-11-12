@@ -9,4 +9,5 @@ No tokens, network requests or macOS permissions are needed.
 
 Nonnumeric badges such as Slack's dot appear alongside the icons and in the popup, but do not count toward
 the total. Apps without a badge show `0`; apps that are not running are omitted.
-Counts depend on each app's Dock badge settings and update every ten seconds.
+Counts depend on each app's Dock badge settings and update every **Refresh interval** seconds
+(ten by default). The interval is limited to 3–30 seconds and applied in 3-second steps.

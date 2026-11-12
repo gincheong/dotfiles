@@ -8,9 +8,9 @@
       "type": "script",
       "position": "right",
       "command": "\"$PACKAGE_DIR/scripts/badges.sh\"",
-      "interval": 10,
+      "interval": 3,
       "icon": "app.badge",
-      "environment": { "APPS": "@setting.apps" },
+      "environment": { "APPS": "@setting.apps", "INTERVAL": "@setting.interval" },
       "layout": {
         "type": "list",
         "source": "apps",

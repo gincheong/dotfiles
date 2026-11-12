@@ -1,56 +1,34 @@
 {
   "$schema": "https://raw.githubusercontent.com/Seb-GRAF/StableBar/v0.13.0/stablebar.schema.json",
   "bar": {
-    "height": 40,
     "offset": 0,
-    "inset": 12,
-    "spacing": 8,
+    "inset": 10,
+    "spacing": 2,
     "belowMenuBar": false,
     "appearance": "dark",
     "keepNotificationsClear": false,
     "keepWindowsClear": true,
     "hideMenuBar": true,
     "menuBarRevealDelay": 0,
-    "inlineHoverControls": false
+    "inlineHoverControls": false,
+    "style": {
+      "cornerRadius": 0,
+      "borderEdges": "bottom"
+    },
+    "margin": 0
   },
   "widgets": [
     {
       "id": "apple",
       "position": "left",
-      "type": "appleMenu"
+      "type": "appleMenu",
+      "tooltip": null
     },
     {
       "id": "app-menu",
       "position": "left",
       "type": "appMenu",
       "expandOnHover": true
-    },
-    {
-      "id": "sound",
-      "type": "audio",
-      "position": "right",
-      "layout": {
-        "children": [
-          {
-            "type": "symbol",
-            "source": "icon"
-          },
-          {
-            "field": "text",
-            "type": "field"
-          }
-        ],
-        "type": "row"
-      }
-    },
-    {
-      "format": "MM.dd E HH:mm",
-      "id": "clock",
-      "onClick": "open -a Calendar",
-      "position": "right",
-      "type": "clock",
-      "icon": "",
-      "details": false
     },
     {
       "id": "menu-bar-items",
@@ -75,22 +53,11 @@
     },
     {
       "details": true,
-      "id": "widget-4f91238a",
-      "position": "right",
-      "type": "battery",
-      "display": "all",
-      "layout": {
-        "children": [
-          {
-            "type": "battery"
-          },
-          {
-            "field": "text",
-            "type": "field"
-          }
-        ],
-        "type": "row"
-      }
+      "format": "MM.dd EEE HH:mm",
+      "id": "widget-3a9051f4",
+      "position": "left",
+      "type": "clock",
+      "display": "all"
     }
   ],
   "workspaceSource": "spaces",
@@ -99,12 +66,22 @@
       "enabled": true,
       "id": "dock-badges-patched",
       "settings": {
-        "apps": "Slack,KakaoTalk,Mail"
+        "apps": "Slack,KakaoTalk",
+        "interval": "5"
       },
       "version": "1.1.0"
     },
     {
       "enabled": true,
+      "id": "calendar-patched",
+      "settings": {
+        "minWidth": 150,
+        "maxWidth": 400
+      },
+      "version": "1.0.0"
+    },
+    {
+      "enabled": false,
       "id": "now-playing",
       "settings": {
         "barWidth": 200
@@ -115,20 +92,11 @@
   "widgetOrder": [
     "apple",
     "app-menu",
-    "now-playing",
-    "sound",
-    "clock",
     "menu-bar-items",
-    "dock-badges-patched",
-    "widget-4f91238a"
+    "calendar-patched",
+    "dock-badges-patched"
   ],
   "widgetOverrides": {
-    "now-playing": {
-      "enabled": true,
-      "position": "right",
-      "display": "all",
-      "icon": ""
-    },
     "dock-badges-patched": {
       "enabled": true,
       "position": "right",
@@ -136,6 +104,10 @@
       "icon": "app.badge",
       "popup": {
         "openOnHover": false
+      },
+      "style": {
+        "fontSize": 13,
+        "fontWeight": "semibold"
       }
     }
   },
@@ -145,17 +117,15 @@
         "center": [],
         "left": [
           "apple",
-          "app-menu",
-          "now-playing"
+          "menu-bar-items",
+          "app-menu"
         ],
         "notchLeft": [],
         "notchRight": [],
         "right": [
-          "clock",
+          "calendar-patched",
           "dock-badges-patched",
-          "sound",
-          "widget-4f91238a",
-          "menu-bar-items"
+          "widget-3a9051f4"
         ]
       }
     },
@@ -164,17 +134,15 @@
         "center": [],
         "left": [
           "apple",
-          "app-menu",
-          "now-playing"
+          "menu-bar-items",
+          "app-menu"
         ],
         "notchLeft": [],
         "notchRight": [],
         "right": [
-          "clock",
+          "calendar-patched",
           "dock-badges-patched",
-          "sound",
-          "widget-4f91238a",
-          "menu-bar-items"
+          "widget-3a9051f4"
         ]
       }
     },
@@ -183,19 +151,23 @@
         "center": [],
         "left": [
           "apple",
-          "app-menu",
-          "now-playing"
+          "menu-bar-items",
+          "app-menu"
         ],
         "notchLeft": [],
         "notchRight": [],
         "right": [
-          "clock",
+          "calendar-patched",
           "dock-badges-patched",
-          "sound",
-          "widget-4f91238a",
-          "menu-bar-items"
+          "widget-3a9051f4"
         ]
       }
+    }
+  },
+  "providers": {
+    "calendar": {
+      "lookahead": 24,
+      "type": "calendar"
     }
   }
 }

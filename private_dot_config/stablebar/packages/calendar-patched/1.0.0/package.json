@@ -7,6 +7,9 @@
   "entry": "config.json",
   "minimumVersion": "0.13.0",
   "settings": {
+    "lookahead": { "type": "number", "title": "Look ahead (hours)", "description": "Hours ahead to look for the next meeting. 1 to 168.", "default": 24 },
+    "soon": { "type": "number", "title": "Upcoming warning (minutes)", "description": "Minutes before the start when the upcoming warning begins. 1 to 120.", "default": 15 },
+    "now": { "type": "number", "title": "Starting warning (minutes)", "description": "Minutes before the start when the starting warning begins. 0 to 60.", "default": 5 },
     "minWidth": { "type": "number", "title": "Minimum width", "description": "Points. 0 lets the widget shrink to its content.", "default": 160 },
     "maxWidth": { "type": "number", "title": "Maximum width", "description": "Points. Must not be smaller than the minimum width.", "default": 400 }
   }

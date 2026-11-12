@@ -1,4 +1,12 @@
 {
+  "providers": {
+    "calendar": {
+      "type": "calendar",
+      "lookahead": "@setting.lookahead",
+      "soon": "@setting.soon",
+      "now": "@setting.now"
+    }
+  },
   "widgets": [
     {
       "id": "calendar-patched",

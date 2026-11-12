@@ -75,6 +75,9 @@
       "enabled": true,
       "id": "calendar-patched",
       "settings": {
+        "lookahead": 11,
+        "soon": 15,
+        "now": 5,
         "minWidth": 150,
         "maxWidth": 400
       },
@@ -162,12 +165,6 @@
           "widget-3a9051f4"
         ]
       }
-    }
-  },
-  "providers": {
-    "calendar": {
-      "lookahead": 24,
-      "type": "calendar"
     }
   }
 }

@@ -2,6 +2,7 @@
   "providers": {
     "calendar": {
       "type": "calendar",
+      "calendars": ["@setting.calendar1", "@setting.calendar2", "@setting.calendar3", "@setting.calendar4"],
       "lookahead": "@setting.lookahead",
       "soon": "@setting.soon",
       "now": "@setting.now"

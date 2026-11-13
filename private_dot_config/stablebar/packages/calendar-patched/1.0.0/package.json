@@ -11,6 +11,10 @@
     "soon": { "type": "number", "title": "Upcoming warning (minutes)", "description": "Minutes before the start when the upcoming warning begins. 1 to 120.", "default": 15 },
     "now": { "type": "number", "title": "Starting warning (minutes)", "description": "Minutes before the start when the starting warning begins. 0 to 60.", "default": 5 },
     "minWidth": { "type": "number", "title": "Minimum width", "description": "Points. 0 lets the widget shrink to its content.", "default": 160 },
-    "maxWidth": { "type": "number", "title": "Maximum width", "description": "Points. Must not be smaller than the minimum width.", "default": 400 }
+    "maxWidth": { "type": "number", "title": "Maximum width", "description": "Points. Must not be smaller than the minimum width.", "default": 400 },
+    "calendar1": { "type": "string", "title": "Calendar 1", "description": "Calendar name to include, as shown in Calendar.", "default": "" },
+    "calendar2": { "type": "string", "title": "Calendar 2", "description": "Calendar name to include, as shown in Calendar.", "default": "" },
+    "calendar3": { "type": "string", "title": "Calendar 3", "description": "Calendar name to include, as shown in Calendar.", "default": "" },
+    "calendar4": { "type": "string", "title": "Calendar 4", "description": "Calendar name to include, as shown in Calendar.", "default": "" }
   }
 }

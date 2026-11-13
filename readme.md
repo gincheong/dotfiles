@@ -100,5 +100,7 @@ config에 입력한 값이 apply 시에 자동 반영된다.
 
 ```toml
 [data]
-  workspace_path = ''
+  workspace_path = ""
+  stablebar_calendar_1 = ""
+  stablebar_calendar_2 = ""
 ```

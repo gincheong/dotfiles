@@ -48,6 +48,9 @@
         {
           "app": "com.apple.controlcenter",
           "item": "com.apple.menuextra.clock"
+        },
+        {
+          "app": "com.xiaogd.Doll"
         }
       ],
       "icon": "ellipsis",

@@ -10,10 +10,8 @@
     "keepWindowsClear": true,
     "hideMenuBar": true,
     "menuBarRevealDelay": 0,
-    "inlineHoverControls": false,
     "style": {
-      "cornerRadius": 12,
-      "borderEdges": "bottom"
+      "cornerRadius": 12
     },
     "margin": 0
   },
@@ -28,7 +26,10 @@
       "id": "app-menu",
       "position": "left",
       "type": "appMenu",
-      "expandOnHover": true
+      "expandOnHover": true,
+      "style": {
+        "paddingHorizontal": 4
+      }
     },
     {
       "id": "menu-bar-items",
@@ -42,14 +43,17 @@
           "app": "com.raycast.macos"
         },
         {
-          "app": "com.apple.controlcenter",
-          "item": "com.apple.menuextra.clock"
+          "app": "com.kakao.KakaoTalkMac"
         },
         {
           "app": "com.apple.controlcenter",
-          "item": "com.apple.menuextra.controlcenter"
+          "item": "com.apple.menuextra.clock"
         }
-      ]
+      ],
+      "icon": "ellipsis",
+      "style": {
+        "paddingHorizontal": 4
+      }
     },
     {
       "details": true,
@@ -68,6 +72,7 @@
       "type": "privacy",
       "display": "all",
       "hideWhenIdle": true,
+      "icon": "",
       "style": {
         "paddingHorizontal": 8
       }
@@ -124,7 +129,7 @@
       "style": {
         "fontSize": 13,
         "fontWeight": "semibold",
-        "paddingHorizontal": 8
+        "paddingHorizontal": 4
       }
     },
     "calendar-patched": {
@@ -139,16 +144,16 @@
         "center": [],
         "left": [
           "apple",
-          "menu-bar-items",
           "app-menu"
         ],
         "notchLeft": [],
         "notchRight": [],
         "right": [
-          "widget-528e3ca7",
           "calendar-patched",
           "dock-badges-patched",
-          "widget-3a9051f4"
+          "menu-bar-items",
+          "widget-3a9051f4",
+          "widget-528e3ca7"
         ]
       }
     },
@@ -157,7 +162,6 @@
         "center": [],
         "left": [
           "apple",
-          "menu-bar-items",
           "app-menu"
         ],
         "notchLeft": [],
@@ -165,7 +169,9 @@
         "right": [
           "calendar-patched",
           "dock-badges-patched",
-          "widget-3a9051f4"
+          "menu-bar-items",
+          "widget-3a9051f4",
+          "widget-528e3ca7"
         ]
       }
     },
@@ -174,7 +180,6 @@
         "center": [],
         "left": [
           "apple",
-          "menu-bar-items",
           "app-menu"
         ],
         "notchLeft": [],
@@ -182,7 +187,9 @@
         "right": [
           "calendar-patched",
           "dock-badges-patched",
-          "widget-3a9051f4"
+          "menu-bar-items",
+          "widget-3a9051f4",
+          "widget-528e3ca7"
         ]
       }
     }
@@ -193,5 +200,8 @@
       "enabled": false,
       "name": "1"
     }
-  ]
+  ],
+  "theme": {
+    "id": "notch"
+  }
 }

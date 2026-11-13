@@ -399,6 +399,7 @@
                     },
                     {
                         "description": "right_shift 연속으로 두 번 누르면 f19 키 입력 (시간 지정 가능)",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -605,15 +606,15 @@
                             "to": [{ "generic_desktop": "do_not_disturb" }]
                         },
                         {
-                            "from": { "key_code": "f22" },
+                            "from": { "key_code": "f20" },
                             "to": [{ "consumer_key_code": "rewind" }]
                         },
                         {
-                            "from": { "key_code": "f23" },
+                            "from": { "key_code": "f21" },
                             "to": [{ "consumer_key_code": "fast_forward" }]
                         },
                         {
-                            "from": { "key_code": "f24" },
+                            "from": { "key_code": "f23" },
                             "to": [{ "consumer_key_code": "play_or_pause" }]
                         },
                         {

@@ -2,7 +2,12 @@
   "providers": {
     "calendar": {
       "type": "calendar",
-      "calendars": ["@setting.calendar1", "@setting.calendar2", "@setting.calendar3", "@setting.calendar4"],
+      "calendars": [
+        "@setting.calendar1",
+        "@setting.calendar2",
+        "@setting.calendar3",
+        "@setting.calendar4"
+      ],
       "lookahead": "@setting.lookahead",
       "soon": "@setting.soon",
       "now": "@setting.now"
@@ -14,6 +19,29 @@
       "type": "calendar",
       "position": "right",
       "details": true,
+      "layout": {
+        "type": "row",
+        "children": [
+          {
+            "type": "symbol",
+            "name": "calendar",
+            "hideWhenEmpty": "start"
+          },
+          {
+            "type": "field",
+            "field": "title",
+            "hideWhenEmpty": "title",
+            "style": {
+              "maxWidth": 180
+            }
+          },
+          {
+            "type": "field",
+            "field": "start",
+            "hideWhenEmpty": "start"
+          }
+        ]
+      },
       "style": {
         "fontSize": 13,
         "minWidth": "@setting.minWidth",

@@ -595,6 +595,12 @@
                         "description": "F13: 구름 한글 <-> Roman 전환",
                         "manipulators": [
                             {
+                                "conditions": [
+                                    {
+                                        "input_sources": [{ "input_source_id": "^org\\.youknowone\\.inputmethod\\.Gureum" }],
+                                        "type": "input_source_if"
+                                    }
+                                ],
                                 "from": { "key_code": "f13" },
                                 "to": [
                                     {

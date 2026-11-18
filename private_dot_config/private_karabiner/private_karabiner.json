@@ -590,6 +590,21 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "F13: 구름 한글 <-> Roman 전환",
+                        "manipulators": [
+                            {
+                                "from": { "key_code": "f13" },
+                                "to": [
+                                    {
+                                        "key_code": "spacebar",
+                                        "modifiers": ["left_control", "left_option", "left_shift"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
                     }
                 ]
             },

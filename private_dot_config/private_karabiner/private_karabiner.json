@@ -592,7 +592,7 @@
                         ]
                     },
                     {
-                        "description": "F13: 구름 한글 <-> Roman 전환",
+                        "description": "구름 한글 <-> Roman 전환",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -604,7 +604,7 @@
                                 "from": { "key_code": "f13" },
                                 "to": [
                                     {
-                                        "key_code": "spacebar",
+                                        "key_code": "backslash",
                                         "modifiers": ["left_control", "left_option", "left_shift"]
                                     }
                                 ],
@@ -637,6 +637,10 @@
                         {
                             "from": { "key_code": "f23" },
                             "to": [{ "consumer_key_code": "play_or_pause" }]
+                        },
+                        {
+                            "from": { "key_code": "keypad_num_lock" },
+                            "to": [{ "key_code": "f18" }]
                         },
                         {
                             "from": { "key_code": "right_option" },

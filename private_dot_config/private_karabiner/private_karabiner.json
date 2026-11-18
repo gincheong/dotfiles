@@ -552,65 +552,6 @@
                                 "type": "basic"
                             }
                         ]
-                    },
-                    {
-                        "description": "leftControl + l -> right space",
-                        "enabled": false,
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "mandatory": ["left_control"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "right_arrow",
-                                        "modifiers": ["left_control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "leftControl + h -> left space",
-                        "enabled": false,
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": { "mandatory": ["left_control"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow",
-                                        "modifiers": ["left_control"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "구름 한글 <-> Roman 전환",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "input_sources": [{ "input_source_id": "^org\\.youknowone\\.inputmethod\\.Gureum" }],
-                                        "type": "input_source_if"
-                                    }
-                                ],
-                                "from": { "key_code": "f13" },
-                                "to": [
-                                    {
-                                        "key_code": "backslash",
-                                        "modifiers": ["left_control", "left_option", "left_shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
                     }
                 ]
             },
@@ -637,6 +578,10 @@
                         {
                             "from": { "key_code": "f23" },
                             "to": [{ "consumer_key_code": "play_or_pause" }]
+                        },
+                        {
+                            "from": { "key_code": "right_command" },
+                            "to": [{ "key_code": "right_command" }]
                         },
                         {
                             "from": { "key_code": "right_option" },
@@ -975,7 +920,7 @@
             "simple_modifications": [
                 {
                     "from": { "key_code": "right_command" },
-                    "to": [{ "key_code": "f13" }]
+                    "to": [{ "key_code": "f18" }]
                 }
             ],
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }

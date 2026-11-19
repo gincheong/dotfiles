@@ -1,0 +1,15 @@
+{
+  "gridBackgroundColor" : "#FFE90A",
+  "gridBackgroundOpacity" : 0.85000000000000009,
+  "gridFontSize" : 16,
+  "gridLineOpacity" : 0.75,
+  "labelBackgroundColor" : "#FFF00B",
+  "labelCornerRadius" : 4,
+  "labelFontFamily" : "Hack",
+  "labelFontSize" : 13,
+  "labelFontWeight" : "medium",
+  "labelGlass" : true,
+  "labelGlassTint" : false,
+  "labelPaddingWidth" : 8,
+  "labelPointer" : false
+}

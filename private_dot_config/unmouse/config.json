@@ -1,8 +1,8 @@
 {
   "gridBackgroundColor" : "#FFE90A",
-  "gridBackgroundOpacity" : 0.85000000000000009,
+  "gridBackgroundOpacity" : 0.80000000000000004,
   "gridFontSize" : 16,
-  "gridLineOpacity" : 0.75,
+  "gridLineOpacity" : 0.70000000000000007,
   "labelBackgroundColor" : "#FFF00B",
   "labelCornerRadius" : 4,
   "labelFontFamily" : "Hack",
